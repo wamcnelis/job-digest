@@ -14,12 +14,14 @@ import time
 import urllib.parse
 import urllib.request
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 HERE = Path(__file__).resolve().parent
 CONFIG = HERE / "config.json"
 HISTORY = HERE / "seen.json"
 REPORT = HERE / "index.html"
 KEEP_DAYS = 21
+TZ = ZoneInfo("America/Los_Angeles")  # her time zone, not the server's
 DETAIL = "https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/"  # how long a job stays in the report after first being seen
 
 API = "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
@@ -151,7 +153,7 @@ def score(j, d, cfg):
 
 def main():
     cfg = json.loads(CONFIG.read_text())
-    today = dt.date.today().isoformat()
+    today = dt.datetime.now(TZ).date().isoformat()
     history = json.loads(HISTORY.read_text()) if HISTORY.exists() else {}
 
     found = {}
@@ -200,7 +202,7 @@ def main():
         j["score"] = score(j, d, cfg)
 
     history = {k: v for k, v in history.items() if keep(v, cfg)}
-    cutoff = (dt.date.today() - dt.timedelta(days=KEEP_DAYS)).isoformat()
+    cutoff = (dt.datetime.now(TZ).date() - dt.timedelta(days=KEEP_DAYS)).isoformat()
     history = {k: v for k, v in history.items() if v["first_seen"] >= cutoff}
     HISTORY.write_text(json.dumps(history, indent=1))
 
@@ -218,7 +220,7 @@ def render(jobs, today, cfg):
     slim = [{**j, "detail": {k: v for k, v in (j.get("detail") or {}).items() if k != "desc"}} for j in jobs]
     data = json.dumps(slim).replace("</", "<\\/")
     tpl = (HERE / "template.html").read_text()
-    stamp = dt.datetime.now().strftime("%a %b %-d, %-I:%M %p")
+    stamp = dt.datetime.now(TZ).strftime("%a %b %-d, %-I:%M %p Pacific")
     return (tpl.replace("__JOBS__", data).replace("__TODAY__", today)
                .replace("__UPDATED__", stamp))
 
