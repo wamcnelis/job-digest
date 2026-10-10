@@ -1,0 +1,322 @@
+{
+  "_comment": "Every search runs in every location. 'label' becomes a filter chip in the report. Keywords match the whole posting (title + description), like LinkedIn's search box.",
+  "locations": [
+    {
+      "name": "Seattle",
+      "location": "Seattle, Washington, United States"
+    },
+    {
+      "name": "Chicago",
+      "location": "Chicago, Illinois, United States"
+    },
+    {
+      "name": "Remote",
+      "location": "United States",
+      "remote": true
+    },
+    {
+      "name": "Other US cities",
+      "location": "United States",
+      "onsite_or_hybrid": true,
+      "only_labels": [
+        "Communications",
+        "PR & Media",
+        "Brand",
+        "Social impact",
+        "Women's health",
+        "Sports"
+      ],
+      "max_pages": 1,
+      "strong_match_only": true,
+      "_comment": "Lighter pass: top results nationwide, only titles containing a boost keyword"
+    }
+  ],
+  "searches": [
+    {
+      "label": "Communications",
+      "keywords": "communications manager"
+    },
+    {
+      "label": "Communications",
+      "keywords": "senior communications specialist"
+    },
+    {
+      "label": "Communications",
+      "keywords": "communications strategist"
+    },
+    {
+      "label": "PR & Media",
+      "keywords": "public relations manager"
+    },
+    {
+      "label": "PR & Media",
+      "keywords": "media relations"
+    },
+    {
+      "label": "PR & Media",
+      "keywords": "account supervisor public relations"
+    },
+    {
+      "label": "Brand",
+      "keywords": "brand strategist"
+    },
+    {
+      "label": "Brand",
+      "keywords": "brand manager"
+    },
+    {
+      "label": "Brand",
+      "keywords": "brand designer"
+    },
+    {
+      "label": "Creative & Content",
+      "keywords": "creative strategist"
+    },
+    {
+      "label": "Creative & Content",
+      "keywords": "content strategist"
+    },
+    {
+      "label": "Project Mgmt",
+      "keywords": "marketing communications project manager"
+    },
+    {
+      "label": "Social impact",
+      "keywords": "communications nonprofit"
+    },
+    {
+      "label": "Social impact",
+      "keywords": "advocacy communications campaign"
+    },
+    {
+      "label": "Women's health",
+      "keywords": "communications women's health"
+    },
+    {
+      "label": "Sports",
+      "keywords": "communications sports"
+    },
+    {
+      "label": "Tech & startups",
+      "keywords": "communications manager startup"
+    }
+  ],
+  "posted_within": "week",
+  "experience_levels": [
+    "associate",
+    "mid-senior"
+  ],
+  "max_pages_per_search": 3,
+  "title_must_include_any": [
+    "communication",
+    "comms",
+    "pr",
+    "public relations",
+    "media",
+    "brand",
+    "marketing",
+    "content",
+    "creative",
+    "storytell",
+    "story",
+    "advocacy",
+    "campaign",
+    "engagement",
+    "editorial",
+    "design",
+    "publicist",
+    "press",
+    "narrative",
+    "outreach",
+    "public affairs",
+    "account supervisor",
+    "account executive",
+    "account manager",
+    "project manager",
+    "program manager",
+    "strategist",
+    "social media"
+  ],
+  "title_exclude": [
+    "intern",
+    "internship",
+    "vice president",
+    "vp",
+    "chief",
+    "senior director",
+    "executive director",
+    "head of",
+    "engineer",
+    "developer",
+    "technician",
+    "nurse",
+    "sales",
+    "data analyst",
+    "ux researcher",
+    "network",
+    "software",
+    "interior design",
+    "mechanical",
+    "electrical",
+    "physician",
+    "principal",
+    "coordinator",
+    "assistant",
+    "administrative"
+  ],
+  "company_exclude": [],
+  "roles": {
+    "Communications": [
+      "communication",
+      "comms",
+      "public affairs",
+      "storytell",
+      "narrative",
+      "messaging"
+    ],
+    "PR & Media": [
+      "pr",
+      "public relations",
+      "media relations",
+      "publicist",
+      "press",
+      "account supervisor",
+      "account executive"
+    ],
+    "Brand": [
+      "brand"
+    ],
+    "Design": [
+      "design",
+      "art director",
+      "visual"
+    ],
+    "Creative & Content": [
+      "creative",
+      "content",
+      "editorial",
+      "copywrit",
+      "social media"
+    ],
+    "Project Mgmt": [
+      "project manager",
+      "program manager",
+      "project management",
+      "producer"
+    ]
+  },
+  "interests": {
+    "Social impact": {
+      "industries": [
+        "non-profit",
+        "philanthrop",
+        "civic",
+        "social",
+        "government relations",
+        "public policy",
+        "think tank",
+        "fundrais",
+        "environmental"
+      ],
+      "description": [
+        "nonprofit",
+        "non-profit",
+        "mission-driven",
+        "social impact",
+        "advocacy",
+        "philanthropy",
+        "social justice",
+        "public health",
+        "community impact",
+        "underserved",
+        "501(c)"
+      ],
+      "min_hits": 2
+    },
+    "Women's health": {
+      "industries": [],
+      "description": [
+        "women's health",
+        "womens health",
+        "women’s health",
+        "maternal health",
+        "menopause",
+        "femtech",
+        "ob/gyn",
+        "obstetric",
+        "pelvic health",
+        "midwi",
+        "breast cancer",
+        "pregnan"
+      ],
+      "min_hits": 1
+    },
+    "Sports": {
+      "industries": [
+        "sports",
+        "athletic"
+      ],
+      "description": [
+        "sports",
+        "athlete",
+        "athletics",
+        "nhl",
+        "nba",
+        "wnba",
+        "nfl",
+        "mls",
+        "nwsl",
+        "mlb",
+        "stadium",
+        "fans"
+      ],
+      "min_hits": 2
+    },
+    "Tech & startups": {
+      "industries": [
+        "software",
+        "technology, information",
+        "internet",
+        "information services",
+        "computer"
+      ],
+      "description": [
+        "startup",
+        "start-up",
+        "series a",
+        "series b",
+        "series c",
+        "venture-backed",
+        "seed-stage",
+        "early-stage"
+      ],
+      "min_hits": 1
+    }
+  },
+  "her_skills": [
+    "storytelling",
+    "advocacy",
+    "media relations",
+    "pitch",
+    "press release",
+    "messaging",
+    "campaign",
+    "thought leadership",
+    "op-ed",
+    "rapid response",
+    "brand",
+    "project management",
+    "audience",
+    "research",
+    "social media",
+    "content",
+    "graphic design",
+    "adobe",
+    "canva",
+    "meltwater",
+    "sprout",
+    "cross-functional",
+    "stakeholder"
+  ],
+  "_comment_tags": "roles: tagged from the job title. interests: tagged from LinkedIn's industry field or phrases in the full description. her_skills: description phrases that raise the match score."
+}

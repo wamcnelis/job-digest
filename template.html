@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Digest</title>
+<style>
+  :root {
+    --bg: #f7f6f3; --card: #ffffff; --ink: #1d1d1f; --muted: #6b6b70;
+    --line: #e6e4df; --accent: #2f6f5e; --accent-soft: #e3efe9; --star: #c98a12;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161617; --card: #1f1f21; --ink: #ededee; --muted: #9a9aa0;
+            --line: #2e2e31; --accent: #6fc2a6; --accent-soft: #1f3a32; --star: #e5b34a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 80px; }
+  header h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--muted); font-size: 13px; }
+  .controls { display: flex; gap: 8px; flex-wrap: wrap; margin: 22px 0 8px; position: sticky; top: 0;
+              background: var(--bg); padding: 10px 0; z-index: 2; }
+  .tab { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px;
+         padding: 6px 14px; font: inherit; font-size: 14px; cursor: pointer; }
+  .tab[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .tab .n { opacity: .6; margin-left: 4px; }
+  input[type=search] { flex: 1; min-width: 160px; border: 1px solid var(--line); background: var(--card);
+         color: var(--ink); border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 14px; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 6px; }
+  .chip { border: 1px solid var(--line); background: none; color: var(--muted); border-radius: 8px;
+          padding: 3px 10px; font: inherit; font-size: 13px; cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+  .tag.lbl { color: var(--accent); }
+  .tag.int { background: #f6e7d8; color: #8a4b12; }
+  @media (prefers-color-scheme: dark) { .tag.int { background: #3a2a1a; color: #e9b27a; } }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
+       margin: 26px 0 8px; font-weight: 600; }
+  .job { display: flex; gap: 14px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+         border-radius: 12px; padding: 14px; margin-bottom: 8px; }
+  .logo { width: 44px; height: 44px; border-radius: 8px; flex: none; object-fit: contain; background: #fff;
+          border: 1px solid var(--line); }
+  .logo.blank { display: grid; place-items: center; font-weight: 700; color: var(--muted); background: var(--bg); }
+  .body { flex: 1; min-width: 0; }
+  .title { font-weight: 600; font-size: 16px; color: var(--ink); text-decoration: none; }
+  .title:hover { color: var(--accent); text-decoration: underline; }
+  .meta { color: var(--muted); font-size: 13.5px; margin-top: 2px; }
+  .tags { margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--bg); color: var(--muted); }
+  .tag.new { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .tag.pay { color: var(--ink); }
+  .acts { display: flex; flex-direction: column; gap: 4px; }
+  .acts button { border: 0; background: none; cursor: pointer; font-size: 18px; color: var(--muted);
+                 width: 32px; height: 32px; border-radius: 8px; }
+  .acts button:hover { background: var(--bg); }
+  .acts .on { color: var(--star); }
+  .empty { text-align: center; color: var(--muted); padding: 60px 0; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Job Digest</h1>
+    <p>Updated __UPDATED__ · from LinkedIn job listings, nothing else</p>
+  </header>
+  <div class="controls">
+    <button class="tab" data-view="new">New today<span class="n" id="n-new"></span></button>
+    <button class="tab" data-view="all">All recent<span class="n" id="n-all"></span></button>
+    <button class="tab" data-view="saved">Saved<span class="n" id="n-saved"></span></button>
+    <input type="search" id="q" placeholder="Filter by title, company, place…">
+  </div>
+  <div class="chips" id="chips"></div>
+  <div id="list"></div>
+</main>
+<script>
+const JOBS = __JOBS__;
+const TODAY = "__TODAY__";
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem(k)) || {}; } catch { return {}; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+};
+let saved = store.get("saved"), hidden = store.get("hidden");
+const tagsOf = j => [...(j.interests || []), ...(j.roles || [])];
+const chipNames = [...new Set(JOBS.flatMap(j => j.wheres || []))].concat(
+  [...new Set(JOBS.flatMap(j => j.interests || []))], [...new Set(JOBS.flatMap(j => j.roles || []))]);
+const allWheres = new Set(JOBS.flatMap(j => j.wheres || []));
+let chips = new Set();
+let view = JOBS.some(j => j.first_seen === TODAY) ? "new" : "all";
+try { view = sessionStorage.getItem("view") || view; } catch {}
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt = d => new Date(d + "T12:00").toLocaleDateString(undefined, {weekday: "long", month: "short", day: "numeric"});
+const ago = d => { if (!d) return ""; const n = Math.round((new Date(TODAY) - new Date(d)) / 864e5);
+  return n <= 0 ? "posted today" : n === 1 ? "posted yesterday" : `posted ${n}d ago`; };
+
+function card(j) {
+  const initial = esc(j.company[0] || "?");
+  const logo = j.logo ? `<img class="logo" src="${esc(j.logo)}" alt="${initial}" loading="lazy" referrerpolicy="no-referrer"
+      onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'logo blank', textContent: this.alt}))">`
+    : `<div class="logo blank">${initial}</div>`;
+  return `<div class="job">${logo}<div class="body">
+    <a class="title" href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
+    <div class="meta">${esc(j.company)} · ${esc(j.location)}${j.detail?.industry ? ` · ${esc(j.detail.industry)}` : ""}</div>
+    <div class="tags">${j.first_seen === TODAY ? '<span class="tag new">New</span>' : ""}
+      ${j.detail?.salary ? `<span class="tag pay">${esc(j.detail.salary)}</span>` : ""}
+      ${(j.wheres || []).map(w => `<span class="tag">${esc(w)}</span>`).join("")}
+      ${(j.interests || []).map(l => `<span class="tag int">${esc(l)}</span>`).join("")}
+      ${(j.roles || []).map(l => `<span class="tag lbl">${esc(l)}</span>`).join("")}
+      <span class="tag">${ago(j.posted)}</span>
+      ${j.detail?.applicants ? `<span class="tag">${esc(j.detail.applicants)} applicants</span>` : ""}
+      ${j.detail?.years ? `<span class="tag">${j.detail.years}+ yrs exp</span>` : ""}</div></div>
+    <div class="acts"><button title="Save" data-save="${j.id}" class="${saved[j.id] ? "on" : ""}">${saved[j.id] ? "★" : "☆"}</button>
+      <button title="Not interested" data-hide="${j.id}">✕</button></div></div>`;
+}
+
+function render() {
+  const q = document.getElementById("q").value.toLowerCase().trim();
+  const visible = JOBS.filter(j => !hidden[j.id]);
+  const sets = { new: visible.filter(j => j.first_seen === TODAY), all: visible, saved: JOBS.filter(j => saved[j.id]) };
+  for (const k in sets) document.getElementById("n-" + k).textContent = sets[k].length;
+  document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-pressed", b.dataset.view === view));
+  document.getElementById("chips").innerHTML = chipNames.map(c =>
+    `<button class="chip" data-chip="${esc(c)}" aria-pressed="${chips.has(c)}">${esc(c)}</button>`).join("");
+  // Location chips narrow by place; interest chips narrow by topic (any selected one matches).
+  const pickW = [...chips].filter(c => allWheres.has(c)), pickL = [...chips].filter(c => !allWheres.has(c));
+  let list = sets[view].filter(j => (!q || [j.title, j.company, j.location].join(" ").toLowerCase().includes(q))
+    && (!pickW.length || pickW.some(c => (j.wheres || []).includes(c)))
+    && (!pickL.length || pickL.some(c => tagsOf(j).includes(c))));
+  if (!list.length) { document.getElementById("list").innerHTML =
+    `<div class="empty">${view === "saved" ? "Nothing saved yet — tap ☆ on a job." : "No jobs here right now."}</div>`; return; }
+  let out = "", last = "";
+  for (const j of list) {
+    if (view !== "new" && j.first_seen !== last) { out += `<h2>Found ${j.first_seen === TODAY ? "today" : fmt(j.first_seen)}</h2>`; last = j.first_seen; }
+    out += card(j);
+  }
+  document.getElementById("list").innerHTML = out;
+}
+
+document.addEventListener("click", e => {
+  const t = e.target.closest("button"); if (!t) return;
+  if (t.dataset.chip) { chips.has(t.dataset.chip) ? chips.delete(t.dataset.chip) : chips.add(t.dataset.chip); }
+  if (t.dataset.view) { view = t.dataset.view; try { sessionStorage.setItem("view", view); } catch {} }
+  if (t.dataset.save) { saved[t.dataset.save] ? delete saved[t.dataset.save] : saved[t.dataset.save] = 1; store.set("saved", saved); }
+  if (t.dataset.hide) { hidden[t.dataset.hide] = 1; delete saved[t.dataset.hide]; store.set("hidden", hidden); store.set("saved", saved); }
+  render();
+});
+document.getElementById("q").addEventListener("input", render);
+render();
+</script>
+</body>
+</html>
