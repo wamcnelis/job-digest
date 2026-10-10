@@ -30,17 +30,17 @@ LEVELS = {"internship": "1", "entry": "2", "associate": "3",
           "mid-senior": "4", "director": "5", "executive": "6"}
 
 
-def fetch(url, tries=3):
+def fetch(url, tries=4):
     for i in range(tries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=20) as r:
                 return r.read().decode("utf-8", "replace")
-        except Exception as e:  # 429 / transient errors: back off and retry
+        except Exception as e:  # 429 = LinkedIn rate limit: back off properly before retrying
             if i == tries - 1:
                 print(f"  ! giving up on {url}: {e}", file=sys.stderr)
                 return ""
-            time.sleep(5 * (i + 1))
+            time.sleep((30 if "429" in str(e) else 5) * (i + 1))
 
 
 def text(pattern, chunk):
@@ -168,7 +168,7 @@ def main():
                 f = found.setdefault(j["id"], {**j, "searches": set(), "labels": set(), "wheres": set()})
                 f["searches"].add(j["search"]); f["labels"].add(j["label"]); f["wheres"].add(j["where"])
                 f["rank"] = min(f["rank"], j["rank"])
-            time.sleep(2)
+            time.sleep(3)
 
     for jid, j in found.items():
         for k in ("searches", "labels", "wheres"):
