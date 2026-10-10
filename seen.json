@@ -304,8 +304,10 @@
    "communications manager startup",
    "communications sports",
    "communications strategist",
+   "communications women's health",
    "creative strategist",
    "marketing communications project manager",
+   "media relations",
    "public relations manager"
   ],
   "labels": [
@@ -316,7 +318,8 @@
    "Project Mgmt",
    "Social impact",
    "Sports",
-   "Tech & startups"
+   "Tech & startups",
+   "Women's health"
   ],
   "wheres": [
    "Seattle"
@@ -333,7 +336,7 @@
   },
   "roles": [],
   "interests": [],
-  "score": 185
+  "score": 201
  },
  "4477866418": {
   "id": "4477866418",
@@ -1061,7 +1064,6 @@
    "account supervisor public relations",
    "communications manager",
    "communications manager startup",
-   "communications nonprofit",
    "communications sports",
    "media relations",
    "public relations manager"
@@ -1069,7 +1071,6 @@
   "labels": [
    "Communications",
    "PR & Media",
-   "Social impact",
    "Sports",
    "Tech & startups"
   ],
@@ -1090,7 +1091,7 @@
    "Communications"
   ],
   "interests": [],
-  "score": 155
+  "score": 147
  },
  "4456989102": {
   "id": "4456989102",
@@ -1141,7 +1142,7 @@
   "posted": "2026-10-10",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQFGhLxgTC3p2g/company-logo_100_100/company-logo_100_100/0/1735851392866/shannon__wilson_inc__logo?e=2147483647&v=beta&t=eL2U7wbq1OiXF2zVWtx_yC7n11MZtOglzl3L-L1OqSA",
   "url": "https://www.linkedin.com/jobs/view/4472249909/",
-  "rank": 3,
+  "rank": 4,
   "searches": [
    "senior communications specialist"
   ],
@@ -1163,7 +1164,7 @@
   },
   "roles": [],
   "interests": [],
-  "score": 37
+  "score": 36
  },
  "4448686948": {
   "id": "4448686948",
@@ -1174,7 +1175,7 @@
   "posted": "2026-10-08",
   "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEAzhZa5uRFvg/company-logo_100_100/company-logo_100_100/0/1672758014870/edelman_logo?e=2147483647&v=beta&t=q-ZVodqcDceO-vJnytU3tqnu21fOYg2_yE1F6q1DaYY",
   "url": "https://www.linkedin.com/jobs/view/4448686948/",
-  "rank": 1,
+  "rank": 0,
   "searches": [
    "account supervisor public relations",
    "advocacy communications campaign",
@@ -1209,7 +1210,7 @@
    "PR & Media"
   ],
   "interests": [],
-  "score": 163
+  "score": 164
  },
  "4477170161": {
   "id": "4477170161",
@@ -1220,7 +1221,7 @@
   "posted": "2026-10-08",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQGDLy4STCnHbg/company-logo_100_100/B56ZnZxDipI0AQ-/0/1760295142304/amazon_logo?e=2147483647&v=beta&t=qIUP7OofXIuuuVACb5ToeWH9PHXrPYsS8jsTZ3Q0sUg",
   "url": "https://www.linkedin.com/jobs/view/4477170161/",
-  "rank": 5,
+  "rank": 6,
   "searches": [
    "communications nonprofit",
    "communications sports",
@@ -1253,7 +1254,7 @@
   "interests": [
    "Tech & startups"
   ],
-  "score": 167
+  "score": 166
  },
  "4467823371": {
   "id": "4467823371",
@@ -1538,7 +1539,7 @@
   "posted": "2026-10-04",
   "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQF7hNebLf_Cdg/company-logo_100_100/company-logo_100_100/0/1630550437351/molina_healthcare_logo?e=2147483647&v=beta&t=08CL_sefIYwAzw1nSjLlDWudPht2Qc3iKgmTyLdS0ME",
   "url": "https://www.linkedin.com/jobs/view/4475367286/",
-  "rank": 4,
+  "rank": 3,
   "searches": [
    "advocacy communications campaign",
    "communications women's health",
@@ -1564,7 +1565,7 @@
   },
   "roles": [],
   "interests": [],
-  "score": 92
+  "score": 93
  },
  "4441152795": {
   "id": "4441152795",
@@ -1929,16 +1930,15 @@
   "posted": "2026-10-08",
   "logo": "https://media.licdn.com/dms/image/v2/C560BAQEm8VfyE8Hh7A/company-logo_100_100/company-logo_100_100/0/1631380545522?e=2147483647&v=beta&t=0_KrhRO00ESnU7wN_yB6qYJQ--lV9BRny9_ifpkFCI0",
   "url": "https://www.linkedin.com/jobs/view/4474879619/",
-  "rank": 0,
+  "rank": 3,
   "searches": [
    "communications sports",
    "communications strategist",
-   "communications women's health"
+   "senior communications specialist"
   ],
   "labels": [
    "Communications",
-   "Sports",
-   "Women's health"
+   "Sports"
   ],
   "wheres": [
    "Seattle"
@@ -1958,7 +1958,7 @@
    "PR & Media"
   ],
   "interests": [],
-  "score": 106
+  "score": 103
  },
  "4448069895": {
   "id": "4448069895",
@@ -2113,6 +2113,7 @@
   "searches": [
    "brand manager",
    "brand strategist",
+   "communications manager startup",
    "communications sports",
    "communications women's health",
    "creative strategist"
@@ -2121,6 +2122,7 @@
    "Brand",
    "Creative & Content",
    "Sports",
+   "Tech & startups",
    "Women's health"
   ],
   "wheres": [
@@ -2140,7 +2142,7 @@
    "Brand"
   ],
   "interests": [],
-  "score": 138
+  "score": 146
  },
  "4474994849": {
   "id": "4474994849",
@@ -4192,7 +4194,6 @@
   "url": "https://www.linkedin.com/jobs/view/4476750325/",
   "rank": 3,
   "searches": [
-   "advocacy communications campaign",
    "communications nonprofit",
    "communications women's health"
   ],
@@ -4220,7 +4221,7 @@
   "interests": [
    "Social impact"
   ],
-  "score": 152
+  "score": 144
  },
  "4478070181": {
   "id": "4478070181",
@@ -4269,7 +4270,7 @@
   "posted": "2026-10-09",
   "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQHaLjdmZuTOHQ/company-logo_100_100/company-logo_100_100/0/1647974565861/alzheimers_association_logo?e=2147483647&v=beta&t=P0YdU7e7ab3vGoJPv9JoHXGQX_R_d5d5CmAe-GIR1AI",
   "url": "https://www.linkedin.com/jobs/view/4456039729/",
-  "rank": 13,
+  "rank": 14,
   "searches": [
    "advocacy communications campaign",
    "communications nonprofit",
@@ -4298,7 +4299,7 @@
   "interests": [
    "Social impact"
   ],
-  "score": 139
+  "score": 138
  },
  "4477862130": {
   "id": "4477862130",
@@ -4309,10 +4310,9 @@
   "posted": "2026-10-09",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQEYQ5hvFAZ8gQ/company-logo_100_100/B56Z6Q4H2JKMAI-/0/1780547092074?e=2147483647&v=beta&t=fZCDaYA-ZkM-FQmK9x2yodbwnWySd-MscxEZiG_VR3A",
   "url": "https://www.linkedin.com/jobs/view/4477862130/",
-  "rank": 17,
+  "rank": 26,
   "searches": [
-   "advocacy communications campaign",
-   "communications nonprofit"
+   "advocacy communications campaign"
   ],
   "labels": [
    "Social impact"
@@ -4334,7 +4334,7 @@
   "interests": [
    "Social impact"
   ],
-  "score": 72
+  "score": 55
  },
  "4459419128": {
   "id": "4459419128",
@@ -4345,7 +4345,7 @@
   "posted": "2026-10-10",
   "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQE9bOVznmlSKg/company-logo_100_100/company-logo_100_100/0/1631306342144?e=2147483647&v=beta&t=24MH-iuRGKfyqFmyQJ6Cd1fnMg_n_bRe6IXzcWbmGyE",
   "url": "https://www.linkedin.com/jobs/view/4459419128/",
-  "rank": 28,
+  "rank": 27,
   "searches": [
    "communications nonprofit"
   ],
@@ -4372,7 +4372,7 @@
   "interests": [
    "Social impact"
   ],
-  "score": 107
+  "score": 108
  },
  "4472913763": {
   "id": "4472913763",
@@ -4416,7 +4416,7 @@
   "posted": "2026-10-10",
   "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQFqdm1TZ-RZKQ/company-logo_100_100/B4EZgOay6gHEAY-/0/1752588562343/amazon_web_services_logo?e=2147483647&v=beta&t=813v--p_AS7bme1J7PlAyB2BEU4-c9ba9AUzyuGb5Wg",
   "url": "https://www.linkedin.com/jobs/view/4469148345/",
-  "rank": 20,
+  "rank": 21,
   "searches": [
    "advocacy communications campaign"
   ],
@@ -4438,7 +4438,7 @@
   },
   "roles": [],
   "interests": [],
-  "score": 64
+  "score": 63
  },
  "4441434345": {
   "id": "4441434345",
@@ -4449,7 +4449,7 @@
   "posted": "2026-10-09",
   "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFFxWR4Jz62og/company-logo_100_100/B4DaAFsmw2KQAI-/0/1786801974560/askethos_logo?e=2147483647&v=beta&t=v_iO77l0tD9pa2jyDyAbsw-aY9n5mUVcLF3BqmY1n0c",
   "url": "https://www.linkedin.com/jobs/view/4441434345/",
-  "rank": 16,
+  "rank": 17,
   "searches": [
    "communications women's health"
   ],
@@ -4475,7 +4475,7 @@
   "interests": [
    "Tech & startups"
   ],
-  "score": 96
+  "score": 95
  },
  "4465573573": {
   "id": "4465573573",
@@ -4486,7 +4486,7 @@
   "posted": "2026-10-06",
   "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQFAwhBV3KXS_Q/company-logo_100_100/company-logo_100_100/0/1630456986815/eclaro_logo?e=2147483647&v=beta&t=KV2JqBSPdORsOAAQWa4Qvuc7F11lD7KWiVDVh88jRJ4",
   "url": "https://www.linkedin.com/jobs/view/4465573573/",
-  "rank": 19,
+  "rank": 20,
   "searches": [
    "communications women's health"
   ],
@@ -4511,7 +4511,7 @@
    "Project Mgmt"
   ],
   "interests": [],
-  "score": 68
+  "score": 67
  },
  "4457666246": {
   "id": "4457666246",
@@ -4798,7 +4798,7 @@
   "posted": "2026-10-05",
   "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQHsvtDMHR05hQ/company-logo_100_100/B4EZ.rghlVHwAI-/0/1785288859076/dwellone_logo?e=2147483647&v=beta&t=rn4mtoF9hl_JALqN8zeLoY-cQLQvMn8K7BXLoulezo8",
   "url": "https://www.linkedin.com/jobs/view/4474619574/",
-  "rank": 29,
+  "rank": 28,
   "searches": [
    "communications manager startup"
   ],
@@ -4820,7 +4820,7 @@
   },
   "roles": [],
   "interests": [],
-  "score": 21
+  "score": 22
  },
  "4476331315": {
   "id": "4476331315",
@@ -5007,13 +5007,15 @@
   "rank": 3,
   "searches": [
    "communications manager",
+   "communications manager startup",
    "communications nonprofit",
    "public relations manager"
   ],
   "labels": [
    "Communications",
    "PR & Media",
-   "Social impact"
+   "Social impact",
+   "Tech & startups"
   ],
   "wheres": [
    "Chicago"
@@ -5032,7 +5034,7 @@
    "Communications"
   ],
   "interests": [],
-  "score": 124
+  "score": 132
  },
  "4469295232": {
   "id": "4469295232",
@@ -5221,13 +5223,15 @@
   "searches": [
    "account supervisor public relations",
    "communications manager",
+   "communications manager startup",
    "communications strategist",
    "media relations",
    "public relations manager"
   ],
   "labels": [
    "Communications",
-   "PR & Media"
+   "PR & Media",
+   "Tech & startups"
   ],
   "wheres": [
    "Chicago"
@@ -5244,7 +5248,7 @@
   },
   "roles": [],
   "interests": [],
-  "score": 116
+  "score": 124
  },
  "4476207338": {
   "id": "4476207338",
@@ -5257,10 +5261,12 @@
   "url": "https://www.linkedin.com/jobs/view/4476207338/",
   "rank": 10,
   "searches": [
-   "communications manager"
+   "communications manager",
+   "communications manager startup"
   ],
   "labels": [
-   "Communications"
+   "Communications",
+   "Tech & startups"
   ],
   "wheres": [
    "Chicago"
@@ -5277,7 +5283,7 @@
   },
   "roles": [],
   "interests": [],
-  "score": 98
+  "score": 106
  },
  "4476887494": {
   "id": "4476887494",
@@ -5288,14 +5294,12 @@
   "posted": "2026-10-10",
   "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQFxhsUQuX5Qyg/company-logo_100_100/company-logo_100_100/0/1630500222462/mars_logo?e=2147483647&v=beta&t=1iLlhUEL0XSBDzDiPL85gveZ6hJPbLE8tQ_-_SCV7ec",
   "url": "https://www.linkedin.com/jobs/view/4476887494/",
-  "rank": 9,
+  "rank": 11,
   "searches": [
-   "brand strategist",
    "communications manager",
    "public relations manager"
   ],
   "labels": [
-   "Brand",
    "Communications",
    "PR & Media"
   ],
@@ -5316,7 +5320,7 @@
    "Brand"
   ],
   "interests": [],
-  "score": 110
+  "score": 100
  },
  "4465919262": {
   "id": "4465919262",
@@ -5330,7 +5334,6 @@
   "rank": 12,
   "searches": [
    "communications manager",
-   "communications strategist",
    "public relations manager",
    "senior communications specialist"
   ],
@@ -5355,7 +5358,7 @@
    "Communications"
   ],
   "interests": [],
-  "score": 91
+  "score": 83
  },
  "4463855713": {
   "id": "4463855713",
@@ -5655,7 +5658,6 @@
    "advocacy communications campaign",
    "communications manager",
    "communications strategist",
-   "media relations",
    "public relations manager"
   ],
   "labels": [
@@ -5680,7 +5682,7 @@
    "PR & Media"
   ],
   "interests": [],
-  "score": 134
+  "score": 126
  },
  "4474834142": {
   "id": "4474834142",
@@ -5891,17 +5893,14 @@
   "posted": "2026-10-08",
   "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=2147483647&v=beta&t=zYekdwB_mnXarr4wa4kw8w3Jikm8YaakM5aiDyAyvP0",
   "url": "https://www.linkedin.com/jobs/view/4476203207/",
-  "rank": 15,
+  "rank": 23,
   "searches": [
-   "communications manager",
-   "communications manager startup",
    "communications strategist",
    "public relations manager"
   ],
   "labels": [
    "Communications",
-   "PR & Media",
-   "Tech & startups"
+   "PR & Media"
   ],
   "wheres": [
    "Chicago"
@@ -5922,7 +5921,7 @@
   "interests": [
    "Tech & startups"
   ],
-  "score": 141
+  "score": 117
  },
  "4475161112": {
   "id": "4475161112",
@@ -5970,11 +5969,9 @@
   "url": "https://www.linkedin.com/jobs/view/4475260386/",
   "rank": 18,
   "searches": [
-   "communications manager",
    "marketing communications project manager"
   ],
   "labels": [
-   "Communications",
    "Project Mgmt"
   ],
   "wheres": [
@@ -5994,7 +5991,7 @@
    "PR & Media"
   ],
   "interests": [],
-  "score": 97
+  "score": 89
  },
  "4477850733": {
   "id": "4477850733",
@@ -6209,11 +6206,13 @@
    "communications nonprofit",
    "communications sports",
    "communications strategist",
+   "content strategist",
    "media relations",
    "senior communications specialist"
   ],
   "labels": [
    "Communications",
+   "Creative & Content",
    "PR & Media",
    "Social impact",
    "Sports"
@@ -6235,7 +6234,7 @@
    "Communications"
   ],
   "interests": [],
-  "score": 150
+  "score": 158
  },
  "4476790142": {
   "id": "4476790142",
@@ -6803,15 +6802,12 @@
   "posted": "2026-10-09",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQEzWIWzwMPzMw/company-logo_100_100/B56Zs4gDIbGsAQ-/0/1766179484645/brunswick_corporation_logo?e=2147483647&v=beta&t=EFGTbzTLPNLKX0qRFpMdBY-6kiN7QaFpg3c2qerlLPA",
   "url": "https://www.linkedin.com/jobs/view/4441275164/",
-  "rank": 22,
+  "rank": 23,
   "searches": [
-   "communications sports",
-   "communications strategist",
-   "senior communications specialist"
+   "communications strategist"
   ],
   "labels": [
-   "Communications",
-   "Sports"
+   "Communications"
   ],
   "wheres": [
    "Chicago"
@@ -6830,7 +6826,7 @@
    "Communications"
   ],
   "interests": [],
-  "score": 53
+  "score": 36
  },
  "4478040494": {
   "id": "4478040494",
@@ -6879,12 +6875,14 @@
   "posted": "2026-10-07",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQEginaUF2_5cg/company-logo_100_100/company-logo_100_100/0/1689291197848/gong_io_logo?e=2147483647&v=beta&t=Cu_4IYPbjjr_MjKoo2j50G9ntGDJec_cZEW2q0MhX8A",
   "url": "https://www.linkedin.com/jobs/view/4440390780/",
-  "rank": 10,
+  "rank": 9,
   "searches": [
+   "communications manager startup",
    "communications strategist"
   ],
   "labels": [
-   "Communications"
+   "Communications",
+   "Tech & startups"
   ],
   "wheres": [
    "Chicago"
@@ -6905,7 +6903,7 @@
   "interests": [
    "Tech & startups"
   ],
-  "score": 60
+  "score": 69
  },
  "4463500860": {
   "id": "4463500860",
@@ -6916,14 +6914,16 @@
   "posted": "2026-10-05",
   "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQFGDt2NjeDfyg/company-logo_100_100/company-logo_100_100/0/1719801370025/guaranteed_rate_logo?e=2147483647&v=beta&t=v2suj4A9jVAyRV37ZlSVuuFRU28ZxcLhJ4BgUFT-Hr4",
   "url": "https://www.linkedin.com/jobs/view/4463500860/",
-  "rank": 17,
+  "rank": 14,
   "searches": [
+   "communications manager startup",
    "communications strategist",
    "media relations"
   ],
   "labels": [
    "Communications",
-   "PR & Media"
+   "PR & Media",
+   "Tech & startups"
   ],
   "wheres": [
    "Chicago"
@@ -6942,7 +6942,7 @@
    "PR & Media"
   ],
   "interests": [],
-  "score": 114
+  "score": 125
  },
  "4470501927": {
   "id": "4470501927",
@@ -6953,7 +6953,7 @@
   "posted": "2026-10-07",
   "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEg1Ox7FAhShg/company-logo_100_100/B4EZoBzd05GoAQ-/0/1760966860672/wpp_media_logo?e=2147483647&v=beta&t=O6xsEcXcsZ7iHp-uxtif1oyVKBe6-Pvq2nMGUaHyT5s",
   "url": "https://www.linkedin.com/jobs/view/4470501927/",
-  "rank": 20,
+  "rank": 19,
   "searches": [
    "communications strategist"
   ],
@@ -6977,7 +6977,7 @@
    "Communications"
   ],
   "interests": [],
-  "score": 83
+  "score": 84
  },
  "4477873300": {
   "id": "4477873300",
@@ -7448,7 +7448,7 @@
   "posted": "2026-10-05",
   "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQE_nTFHvWZk1w/company-logo_100_100/B4EZ6xighvJYAI-/0/1781095074258/golinketchum_logo?e=2147483647&v=beta&t=jiOYiAlVlxl6vaP_vW_RYMrw0V1S7YpTqxBFIy9LPKk",
   "url": "https://www.linkedin.com/jobs/view/4474600415/",
-  "rank": 26,
+  "rank": 27,
   "searches": [
    "advocacy communications campaign",
    "communications nonprofit",
@@ -7475,7 +7475,7 @@
    "PR & Media"
   ],
   "interests": [],
-  "score": 101
+  "score": 100
  },
  "4457180435": {
   "id": "4457180435",
@@ -7626,7 +7626,7 @@
   "posted": "2026-10-10",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQGTZlg7ftBb4A/company-logo_100_100/B56Zy0r6Z1KcAQ-/0/1772557936679/mosaic_sales_solutions_logo?e=2147483647&v=beta&t=s69QovIDa7EcsTLUyz0agiok3BW6vy4xJcbBPKxa5Aw",
   "url": "https://www.linkedin.com/jobs/view/4448079776/",
-  "rank": 26,
+  "rank": 28,
   "searches": [
    "account supervisor public relations"
   ],
@@ -7648,7 +7648,7 @@
   },
   "roles": [],
   "interests": [],
-  "score": 66
+  "score": 64
  },
  "4475119603": {
   "id": "4475119603",
@@ -9772,11 +9772,13 @@
   "url": "https://www.linkedin.com/jobs/view/4477861809/",
   "rank": 0,
   "searches": [
+   "communications manager startup",
    "content strategist",
    "creative strategist"
   ],
   "labels": [
-   "Creative & Content"
+   "Creative & Content",
+   "Tech & startups"
   ],
   "wheres": [
    "Chicago"
@@ -9797,7 +9799,7 @@
   "interests": [
    "Tech & startups"
   ],
-  "score": 112
+  "score": 120
  },
  "4468285621": {
   "id": "4468285621",
@@ -10604,11 +10606,13 @@
   "posted": "2026-10-08",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQE3hA0XsnJw8A/company-logo_100_100/company-logo_100_100/0/1719811912615/grant_thornton_us_logo?e=2147483647&v=beta&t=CT4Kz0rTZdUYSstiUCz6g_TdZ5UPx4hI8hPGrqQEFVA",
   "url": "https://www.linkedin.com/jobs/view/4474820777/",
-  "rank": 23,
+  "rank": 20,
   "searches": [
+   "communications manager",
    "content strategist"
   ],
   "labels": [
+   "Communications",
    "Creative & Content"
   ],
   "wheres": [
@@ -10626,7 +10630,7 @@
   },
   "roles": [],
   "interests": [],
-  "score": 73
+  "score": 84
  },
  "4476852931": {
   "id": "4476852931",
@@ -10637,7 +10641,7 @@
   "posted": "2026-10-09",
   "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQGRhsociEn4gQ/company-logo_100_100/company-logo_100_100/0/1631367875582?e=2147483647&v=beta&t=bk_i8KnJwZyUrbBXvWK0NMb6W3nPq64rupEGTrKvxYU",
   "url": "https://www.linkedin.com/jobs/view/4476852931/",
-  "rank": 28,
+  "rank": 27,
   "searches": [
    "content strategist"
   ],
@@ -10659,7 +10663,7 @@
   },
   "roles": [],
   "interests": [],
-  "score": 57
+  "score": 58
  },
  "4467571120": {
   "id": "4467571120",
@@ -10889,7 +10893,7 @@
   "posted": "2026-10-08",
   "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQG-QSRUc-3_Gg/company-logo_100_100/B4EaDOWLIKH8AI-/0/1790168314599/tbwa_logo?e=2147483647&v=beta&t=MFbtSO8gihMlL5MCN7auYtDgElJ_W25BrTNUo8lNMxs",
   "url": "https://www.linkedin.com/jobs/view/4457999652/",
-  "rank": 7,
+  "rank": 6,
   "searches": [
    "marketing communications project manager"
   ],
@@ -10914,7 +10918,7 @@
    "Project Mgmt"
   ],
   "interests": [],
-  "score": 99
+  "score": 100
  },
  "4441122144": {
   "id": "4441122144",
@@ -10925,7 +10929,7 @@
   "posted": "2026-10-10",
   "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQHZbE9smjH6AA/company-logo_100_100/B4EZrZ4h8YIUAQ-/0/1764592067022/omnicom_media_group_2_logo?e=2147483647&v=beta&t=_ws5NxqNAF4cxFVhx3XOCWKBbNyGS1fNZCWxMT4_vAA",
   "url": "https://www.linkedin.com/jobs/view/4441122144/",
-  "rank": 8,
+  "rank": 7,
   "searches": [
    "marketing communications project manager"
   ],
@@ -10950,7 +10954,7 @@
    "Project Mgmt"
   ],
   "interests": [],
-  "score": 110
+  "score": 111
  },
  "4476122740": {
   "id": "4476122740",
@@ -10961,7 +10965,7 @@
   "posted": "2026-10-06",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQGfCLzw4RUeIg/company-logo_100_100/company-logo_100_100/0/1665502191593/linqia_logo?e=2147483647&v=beta&t=65ezxNeR53F9eL71K-EvQSZ6qUYx7gixHr0Cl8SYmkI",
   "url": "https://www.linkedin.com/jobs/view/4476122740/",
-  "rank": 9,
+  "rank": 8,
   "searches": [
    "marketing communications project manager"
   ],
@@ -10983,7 +10987,7 @@
   },
   "roles": [],
   "interests": [],
-  "score": 71
+  "score": 72
  },
  "4474409793": {
   "id": "4474409793",
@@ -10994,7 +10998,7 @@
   "posted": "2026-10-06",
   "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQFlVHH8JnzWUw/company-logo_100_100/B4EZ8elF7yJYAI-/0/1782924468221/abelson_taylor_group_logo?e=2147483647&v=beta&t=61yuDaaUArBrqhnmfO_imYNzQhcOlA2eQQcL6h3UpIc",
   "url": "https://www.linkedin.com/jobs/view/4474409793/",
-  "rank": 10,
+  "rank": 9,
   "searches": [
    "marketing communications project manager"
   ],
@@ -11019,7 +11023,7 @@
    "Project Mgmt"
   ],
   "interests": [],
-  "score": 108
+  "score": 109
  },
  "4476382197": {
   "id": "4476382197",
@@ -11680,7 +11684,7 @@
   "posted": "2026-10-07",
   "logo": "https://media.licdn.com/dms/image/v2/C560BAQGxtQDWxtigYQ/company-logo_100_100/company-logo_100_100/0/1630622255642/w_s_darley__co_logo?e=2147483647&v=beta&t=jZrZikXBggi-7FbaVWgH91d8ZuVjC47Ygxg_GrM26g4",
   "url": "https://www.linkedin.com/jobs/view/4476536242/",
-  "rank": 18,
+  "rank": 19,
   "searches": [
    "advocacy communications campaign",
    "communications sports"
@@ -11706,7 +11710,7 @@
    "Communications"
   ],
   "interests": [],
-  "score": 82
+  "score": 81
  },
  "4475862904": {
   "id": "4475862904",
@@ -11861,7 +11865,7 @@
   "posted": "2026-10-06",
   "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQE4cT5dSJoAvg/company-logo_100_100/B4EZzWYxeFJYAQ-/0/1773123344627?e=2147483647&v=beta&t=ygY7btooPY221vEtju8JZyJ_KuIQR811I-dLthEyee4",
   "url": "https://www.linkedin.com/jobs/view/4476387648/",
-  "rank": 10,
+  "rank": 11,
   "searches": [
    "communications sports"
   ],
@@ -11885,7 +11889,7 @@
    "Brand"
   ],
   "interests": [],
-  "score": 101
+  "score": 100
  },
  "4477881753": {
   "id": "4477881753",
@@ -11896,7 +11900,7 @@
   "posted": "2026-10-09",
   "logo": "https://media.licdn.com/dms/image/v2/C560BAQET1Nb0JyiUoA/company-logo_100_100/company-logo_100_100/0/1657226172968/oak_view_group_logo?e=2147483647&v=beta&t=VLIhIMWpBR29k30yWKYXaoVs_bfTs2JYSJU5vImT8Jg",
   "url": "https://www.linkedin.com/jobs/view/4477881753/",
-  "rank": 13,
+  "rank": 14,
   "searches": [
    "communications sports"
   ],
@@ -11922,7 +11926,7 @@
   "interests": [
    "Sports"
   ],
-  "score": 111
+  "score": 110
  },
  "4475111571": {
   "id": "4475111571",
@@ -11933,7 +11937,7 @@
   "posted": "2026-10-06",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQErgmGjilB6WA/company-logo_100_100/B56ZfGynaSH8AQ-/0/1751386847340/24seventalent_logo?e=2147483647&v=beta&t=RshZl04zuFSQlk9gMfbWfz0mD_kKPbhw-gLqihoAXSA",
   "url": "https://www.linkedin.com/jobs/view/4475111571/",
-  "rank": 6,
+  "rank": 10,
   "searches": [
    "communications manager startup"
   ],
@@ -11957,7 +11961,7 @@
    "Brand"
   ],
   "interests": [],
-  "score": 113
+  "score": 109
  },
  "4475974514": {
   "id": "4475974514",
@@ -11968,7 +11972,7 @@
   "posted": "2026-10-08",
   "logo": "https://media.licdn.com/dms/image/v2/C510BAQE8TQkMDpZ5iw/company-logo_100_100/company-logo_100_100/0/1631373013024?e=2147483647&v=beta&t=hyU6Mhmh_mXYdQOiA1o1MxnAKK0vsE4AKZdEsosMPqk",
   "url": "https://www.linkedin.com/jobs/view/4475974514/",
-  "rank": 10,
+  "rank": 15,
   "searches": [
    "communications manager startup"
   ],
@@ -11992,7 +11996,7 @@
    "Creative & Content"
   ],
   "interests": [],
-  "score": 97
+  "score": 92
  },
  "4474552524": {
   "id": "4474552524",
@@ -12003,7 +12007,7 @@
   "posted": "2026-10-06",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQESQ8D_3XXuOw/company-logo_100_100/B56ZzykHivHIAQ-/0/1773596080557/aikido_security_logo?e=2147483647&v=beta&t=UeXpfFbMIVdo0H6oSxpe5lScCBUk7RO9KcWFpm2Lh84",
   "url": "https://www.linkedin.com/jobs/view/4474552524/",
-  "rank": 11,
+  "rank": 16,
   "searches": [
    "communications manager startup"
   ],
@@ -12027,7 +12031,7 @@
   "interests": [
    "Tech & startups"
   ],
-  "score": 98
+  "score": 93
  },
  "4476838299": {
   "id": "4476838299",
@@ -12038,7 +12042,7 @@
   "posted": "2026-10-09",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQF_OpNqhKfEZg/company-logo_100_100/B56Z75vFBaHIAI-/0/1782306328864/evlo_ai_logo?e=2147483647&v=beta&t=MtsOJcMy_ubIXjyoGkhPH5a-xh5C6JCVnP4EvmjL954",
   "url": "https://www.linkedin.com/jobs/view/4476838299/",
-  "rank": 13,
+  "rank": 19,
   "searches": [
    "communications manager startup"
   ],
@@ -12064,7 +12068,7 @@
   "interests": [
    "Tech & startups"
   ],
-  "score": 131
+  "score": 125
  },
  "4456254400": {
   "id": "4456254400",
@@ -12110,14 +12114,12 @@
   "posted": "2026-10-08",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQFuQMSI3zgmRw/company-logo_100_100/B56Z3aploQGoAQ-/0/1777489828808/salesforce_logo?e=2147483647&v=beta&t=1MZrzAAgAUVXxVH-02aUbLGyPi8hi7M6_NgqTtjGfmQ",
   "url": "https://www.linkedin.com/jobs/view/4468280375/",
-  "rank": 18,
+  "rank": 23,
   "searches": [
-   "communications manager startup",
    "marketing communications project manager"
   ],
   "labels": [
-   "Project Mgmt",
-   "Tech & startups"
+   "Project Mgmt"
   ],
   "wheres": [
    "Chicago"
@@ -12136,7 +12138,7 @@
   "interests": [
    "Tech & startups"
   ],
-  "score": 63
+  "score": 50
  },
  "4468321204": {
   "id": "4468321204",
@@ -12180,7 +12182,7 @@
   "posted": "2026-10-10",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQEiChS8V0YBcQ/company-logo_100_100/company-logo_100_100/0/1720449395555/motus_llc_logo?e=2147483647&v=beta&t=A8eKrGinY6W3f-ef6BIfut0b3zjhI9-ZQ0vcn2zUjG0",
   "url": "https://www.linkedin.com/jobs/view/4469215318/",
-  "rank": 28,
+  "rank": 22,
   "searches": [
    "communications manager startup"
   ],
@@ -12206,7 +12208,7 @@
   "interests": [
    "Tech & startups"
   ],
-  "score": 104
+  "score": 110
  },
  "4475484095": {
   "id": "4475484095",
@@ -12217,7 +12219,7 @@
   "posted": "2026-10-07",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQHl-vAPhkImMg/company-logo_100_100/B56ZsneY1RJUAQ-/0/1765893836894/thoughtspot_logo?e=2147483647&v=beta&t=8eOsMiUyuvB9rPfiTtSGeVas-0Ihp4QPA184_uHG7ro",
   "url": "https://www.linkedin.com/jobs/view/4475484095/",
-  "rank": 29,
+  "rank": 23,
   "searches": [
    "communications manager startup"
   ],
@@ -12241,7 +12243,7 @@
   "interests": [
    "Tech & startups"
   ],
-  "score": 92
+  "score": 98
  },
  "4476956028": {
   "id": "4476956028",
@@ -24206,15 +24208,15 @@
   "posted": "2026-10-10",
   "logo": "https://media.licdn.com/dms/image/v2/D560BAQF_LxAbBWRTog/company-logo_100_100/company-logo_100_100/0/1719845134181?e=2147483647&v=beta&t=tKGbpCnxYe2dLIrXE3D-GkmeLQgztATlN-hmjS2j5zI",
   "url": "https://www.linkedin.com/jobs/view/4467874576/",
-  "rank": 9,
+  "rank": 12,
   "searches": [
-   "communications strategist",
+   "communications manager startup",
    "communications women's health",
    "content strategist"
   ],
   "labels": [
-   "Communications",
    "Creative & Content",
+   "Tech & startups",
    "Women's health"
   ],
   "wheres": [
@@ -24234,7 +24236,7 @@
    "Communications"
   ],
   "interests": [],
-  "score": 122
+  "score": 119
  },
  "4474288634": {
   "id": "4474288634",
@@ -24349,11 +24351,13 @@
   "url": "https://www.linkedin.com/jobs/view/4476878653/",
   "rank": 8,
   "searches": [
+   "communications manager",
    "communications manager startup",
    "communications women's health",
    "marketing communications project manager"
   ],
   "labels": [
+   "Communications",
    "Project Mgmt",
    "Tech & startups",
    "Women's health"
@@ -24377,7 +24381,7 @@
    "Project Mgmt"
   ],
   "interests": [],
-  "score": 97
+  "score": 105
  },
  "4477840437": {
   "id": "4477840437",
@@ -26316,5 +26320,108 @@
    "Sports"
   ],
   "score": 133
+ },
+ "4466123649": {
+  "id": "4466123649",
+  "title": "Group Account Supervisor",
+  "company": "AbbVie",
+  "location": "Mettawa, IL",
+  "salary": "",
+  "posted": "2026-10-06",
+  "logo": "https://media.licdn.com/dms/image/v2/D560BAQF_LxAbBWRTog/company-logo_100_100/company-logo_100_100/0/1719845134181?e=2147483647&v=beta&t=tKGbpCnxYe2dLIrXE3D-GkmeLQgztATlN-hmjS2j5zI",
+  "url": "https://www.linkedin.com/jobs/view/4466123649/",
+  "rank": 27,
+  "searches": [
+   "account supervisor public relations"
+  ],
+  "labels": [
+   "PR & Media"
+  ],
+  "wheres": [
+   "Chicago"
+  ],
+  "first_seen": "2026-10-10",
+  "detail": {
+   "industry": "Pharmaceutical Manufacturing and Biotechnology Research",
+   "seniority": "Not Applicable",
+   "salary": "",
+   "years": 15,
+   "applicants": "25",
+   "desc": "company descriptionabout abbvieabbvie's mission is to discover and deliver innovative medicines and solutions that solve serious health issues today and address the medical challenges of tomorrow. we strive to have a remarkable impact on people's lives across several key therapeutic areas including immunology, oncology and neuroscience - and products and services in our allergan aesthetics portfolio. for more information about abbvie, please visit us at www.abbvie.com. follow @abbvie on linkedin, facebook, instagram, x and youtube.job descriptionthe abbvie ad agency group account supervisor is a key cross-functional member of the franchise facing team responsible for leading the development of us and global healthcare professional and consumer marketing campaigns and tactics. this role has responsibility for defining the objectives, strategies and long-range plans for creating engaging programs that deliver brand messages to their target audiences. this role leads a high-performing team of account supervisors, project managers and traffic managers with budget responsibility in excess of $1 million. role reports to the associate director account group.as a member of the theapeutics analytics & operations (ta&o) organization supporting our brand franchises, the group account supervisor is the subject matter expert, evangelist and marketing point of contact for assigned abbvie brands and is responsible for leading and partnering with multiple internal brand teams, cross functional team members and external agency partners to align on campaign scope and deliverables. this role manages both the strategic and tactical execution of a campaign through its entire life cycle to ensure maximum brand impact.this role is also accountable for bringing expertise and leadership support to advance the abbvie ad agency\u2019s continually growing us and global footprint. specifically, developing and maintaining brand team relationships, providing analysis of market dynamics and key lessons learned, reviewing competitor promotional moves, identifying key areas for improvement, annual forecast planning and monthly spend reconciliation.key responsibilities:collaborate with marketing directors and other key stakeholders to build, manage, and execute marketing communication plans to achieve business objectives and goals.lead the definition and creation of marketing strategies, objectives, messaging and tactics.manage the tactical development business processes and marketing driven input from inception to delivery, growth, and eventual retirement. work closely with brand marketing, agency partners, and other cross functional team members to ensure that value propositions, messaging and marketing activities align to the brand story.collaborate effectively in a matrixed environment with brand marketing, market research, analytics, business technology solutions (bts), medical/regulatory/legal, external agencies and other integrated business partners.maintain an \u201cexpert level\u201d understanding of the agency workflow process including project initiation and kickoff, collaboration, necessary approvals, production and archiving.demonstrate critical creative thinking and problem-solving skills.troubleshoot roadblocks and identify creative and compliant solutions to facilitate forward motion of new initiatives.establish a unified focus and purpose to inspire others to work together as a team.competencies:ability to lead independent initiatives without day-to-day supervision.able to prioritize and gracefully manage competing priorities to ensure deadlines are met.collaborative nature and ability to influence and guide cross-functional stakeholders. exceptional functional knowledge of and expertise in the pharmaceutical market.acumen for leading multiple initiatives simultaneously.inquisitive, strong analytical/creative skills, including the ability to infer and apply learnings.excellent verbal and written communication skills. attention to detail and follow-through on execution.ability to relate well to others, active listening skills, and exhibiting patience.strong project management abilities and critical work tool experience, including microsoft office suite, veeva, workfront and mavenlink.qualificationsbachelor\u2019s degree in business or marketing.15-20 years of ad agency account leadership experience managing several brandspharmaceutical industry experience required.people leadership experience, including managing cross-functional teams and/or external partners through large projects or initiatives.a strategic mindset that can balance immediate requirements with a long-term vision.demonstrated progressively increasing responsibility in leading large, complex, marketing campaigns .proven track record of managing successful pharmaceutical product launches.outstanding communicator and comfortable interacting with a diverse group of marketing and creative individuals.strong collaboration and interpersonal skills to be effective managing through a highly matrixed organization.additional informationapplicable only to applicants applying to a position in any location with pay disclosure requirements under state or local law:the compensation range described below is the range of possible base pay compensation that the company believes in good faith it will pay for this role at the time of thisposting based on the job grade for this position. individual compensation paid within this range will depend on many factors including geographic location,and we may ultimately pay more or less than the posted range. this range may be modified in the future. we offer a comprehensive package of benefits including paid time off (vacation, holidays, sick), medical/dental/vision insurance and 401(k) to eligible employees. this job is eligible to participate in our long-term incentive programs. note: no amount of pay is considered to be wages or compensation until such amount is earned, vested, and determinable. the amount and availability of any bonus, commission,incentive, benefits, or any other form of compensation and benefits that are allocable to a particular employee remains in the company's sole and absolute discretion unless anduntil paid and may be modified at the company\u2019s sole and absolute discretion, consistent with applicable law.abbvie is an equal opportunity employer and is committed to operating with integrity, driving innovation, transforming lives and serving our community.\u202f equal opportunity employer/veterans/disabled.us & puerto rico only - to learn more, visit https://www.abbvie.com/join-us/equal-employment-opportunity-employer.htmlus & puerto rico applicants seeking a reasonable accommodation, click here to learn more:https://www.abbvie.com/join-us/reasonable-accommodations.html",
+   "skills": 8
+  },
+  "roles": [
+   "PR & Media"
+  ],
+  "interests": [],
+  "score": 48
+ },
+ "4477850353": {
+  "id": "4477850353",
+  "title": "Executive Operations & Leadership Engagement DirectorDirector",
+  "company": "Salesforce",
+  "location": "Chicago, IL",
+  "salary": "",
+  "posted": "2026-10-09",
+  "logo": "https://media.licdn.com/dms/image/v2/D560BAQFuQMSI3zgmRw/company-logo_100_100/B56Z3aploQGoAQ-/0/1777489828808/salesforce_logo?e=2147483647&v=beta&t=1MZrzAAgAUVXxVH-02aUbLGyPi8hi7M6_NgqTtjGfmQ",
+  "url": "https://www.linkedin.com/jobs/view/4477850353/",
+  "rank": 25,
+  "searches": [
+   "communications manager startup"
+  ],
+  "labels": [
+   "Tech & startups"
+  ],
+  "wheres": [
+   "Chicago"
+  ],
+  "first_seen": "2026-10-10",
+  "detail": {
+   "industry": "Software Development, IT Services and IT Consulting, and Technology, Information and Internet",
+   "seniority": "Not Applicable",
+   "salary": "$164,000 - $304,700",
+   "years": 10,
+   "applicants": "25",
+   "desc": "to get the best candidate experience, please consider applying for a maximum of 3 roles within 12 months to ensure you are not duplicating efforts.job categoryoperationsjob detailsabout salesforcesalesforce is the #1 ai crm, where humans with agents drive customer success together. here, ambition meets action. tech meets trust. and innovation isn\u2019t a buzzword \u2014 it\u2019s a way of life. the world of work as we know it is changing and we're looking for trailblazers who are passionate about bettering business and the world through ai, driving innovation, and keeping salesforce's core values at the heart of it all.ready to level-up your career at the company leading workforce transformation in the agentic era? you\u2019re in the right place! agentforce is the future of ai, and you are the future of salesforce.job title: executive operations & leadership engagement directorlocation: texas - austin, georgia - atlanta, illinois-chicago, indiana - indianapolis, washington - seattleabout salesforcewe\u2019re salesforce, the customer company, inspiring the future of business with ai + data + crm. leading with our core values, we help companies across every industry blaze new trails and connect with customers in a whole new way. and, we empower you to be a trailblazer, too \u2014 driving your performance and career growth, charting new paths and improving the state of the world. if you believe in business as the greatest platform for change and in companies doing well and doing good \u2013 you\u2019ve come to the right place.about the rolewe are seeking a director, executive operations & leadership engagement to join the executive operations team within the customer success coo organization. reporting directly to the executive operations leader, this role serves as a strategic operational and communications partner, combining business planning and executive governance with senior storytelling and messaging strategy.in this role, you will bridge executive planning and execution by translating open-ended executive priorities into structured operational plans, high-visibility leadership forums, clear business narratives, and priority strategic initiatives. as a key member of the executive operations team, you will equip leadership to lead with clarity and impact, build the operational infrastructure that powers our executive engagement framework, define operational and communications standards, and drive cross-functional alignment.your impact - responsibilitiesestablish and govern the overarching operating rhythm, decision-making frameworks, and executive forums across the organization to drive operational discipline and accountability.partner closely with customer success coo leadership and key business partners to streamline decision-making, eliminate organizational friction, and drive to execution.maintain executive focus on critical business decisions by filtering operational noise, surfacing emerging risks early, and guiding partner teams to resolve lower-level issues.own the end-to-end communications strategy and messaging framework for leadership, ensuring tight alignment with broader organizational goals and company values.shape the agenda, narrative structure, messaging flow, and presentation content for major executive forums, leadership summits, offsites, and all teams meetings.direct high-stakes, ad-hoc strategic priorities on behalf of leadership, rapidly converting open-ended, complex challenges into structured execution plans across matrixed teams.minimum qualificationsbachelor's degree in business administration, management, operations management, or a related field, or equivalent practical experience.10+ years of progressive leadership experience in executive operations, business operations, executive communications, or strategic program management within a global saas or technology environment.proven track record of setting operational frameworks, defining executive communications strategies, and managing senior stakeholder relationships across matrixed teams.deep expertise in executive speechwriting, narrative framing, and translating complex operational and business topics into clear, compelling executive presentations.exceptional capability to convert ambiguous business inputs, rapid priority shifts, and open-ended executive requests into structured operational models.strong business acumen across customer success operational rhythms, financial management cycles, and employee engagement models.preferred qualificationsmaster\u2019s degree or mba preferred.unleash your potentialwhen you join salesforce, you\u2019ll be limitless in all areas of your life. our benefits and resources support you to find balance and be your best, and our ai agents accelerate your impact so you can do your best. together, we\u2019ll bring the power of agentforce to organizations of all sizes and deliver amazing experiences that customers love. apply today to not only shape the future \u2014 but to redefine what\u2019s possible \u2014 for yourself, for ai, and the world.accommodationsif you need a reasonable accommodation during the application or the recruiting process, please submit a request via this accommodations request form.please note that salesforce uses artificial intelligence (ai) tools to help our recruiters assess and evaluate candidates\u2019 resumes and qualifications throughout the recruiting process. humans will always make any candidate selection and hiring decisions. please see our candidate privacy statement for more information about how we use your personal data and your rights, including with regard to use of ai tools and opt out options.posting statementsalesforce is an equal opportunity employer and maintains a policy of non-discrimination with all employees and applicants for employment. what does that mean exactly? it means that at salesforce, we believe in equality for all. and we believe we can lead the path to equality in part by creating a workplace that\u2019s inclusive, and free from discrimination. know your rights: workplace discrimination is illegal. any employee or potential employee will be assessed on the basis of merit, competence and qualifications \u2013 without regard to race, religion, color, national origin, sex, sexual orientation, gender expression or identity, transgender status, age, disability, veteran or marital status, political viewpoint, or other classifications protected by law. this policy applies to current and prospective employees, no matter where they are in their salesforce employment journey. it also applies to recruiting, hiring, job assignment, compensation, promotion, benefits, training, assessment of job performance, discipline, termination, and everything in between. recruiting, hiring, and promotion decisions at salesforce are fair and based on merit. the same goes for compensation, benefits, promotions, transfers, reduction in workforce, recall, training, and education.in the united states, compensation offered will be determined by factors such as location, job level, job-related knowledge, skills, and experience. certain roles may be eligible for incentive compensation, equity, and benefits. salesforce offers a variety of benefits to help you live well including: time off programs, medical, dental, vision, mental health support, paid parental leave, life and disability insurance, 401(k), and an employee stock purchasing program. more details about company benefits can be found at the following link: https://www.salesforcebenefits.com.at salesforce, we believe in equitable compensation practices that reflect the dynamic nature of labor markets across various regions. the typical base salary range for this position is $164,000 - $304,700 annually. the range represents base salary only, and does not include company bonus, incentive for sales roles, equity or benefits, as applicable.",
+   "skills": 5
+  },
+  "roles": [],
+  "interests": [
+   "Tech & startups"
+  ],
+  "score": 48
+ },
+ "4474231729": {
+  "id": "4474231729",
+  "title": "Manager, Retention & Lifecycle Marketing",
+  "company": "BlueChew",
+  "location": "Chicago, IL",
+  "salary": "",
+  "posted": "2026-10-05",
+  "logo": "https://media.licdn.com/dms/image/v2/D560BAQGg2Fy64AGENA/company-logo_100_100/company-logo_100_100/0/1691073320957?e=2147483647&v=beta&t=n9jMXgn08oLsMkYyrS2pe8kyG_d2EjlWtzmACKe7EZs",
+  "url": "https://www.linkedin.com/jobs/view/4474231729/",
+  "rank": 28,
+  "searches": [
+   "communications manager startup"
+  ],
+  "labels": [
+   "Tech & startups"
+  ],
+  "wheres": [
+   "Chicago"
+  ],
+  "first_seen": "2026-10-10",
+  "detail": {
+   "industry": "Hospitality, Food and Beverage Services, and Retail",
+   "seniority": "Mid-Senior level",
+   "salary": "",
+   "years": null,
+   "applicants": "25",
+   "desc": "meds.com is a rapidly growing consumer technology firm operating a suite of healthcare businesses, including our flagship brands bluechew & mod. our mission is to better patients' lives through innovative healthcare solutions. with a team of over 500 professionals across various specialties, we've built scalable pharmacy, telemedicine, and e-commerce platforms using cutting-edge technology. as we continue our accelerated growth trajectory, we're launching new products to expand our patient base and accelerate growth. join us in tackling exciting challenges at the intersection of healthcare and technology.build the customer journey that drives long-term growth:we're building one of the fastest-growing direct-to-consumer healthcare brands in the country, and we're looking for someone to own one of the most important growth levers in the business: customer retention. our customers don't stop interacting with us after their first purchase. every message, every renewal, every product recommendation, and every touchpoint is an opportunity to build trust, increase lifetime value, and create an exceptional customer experience.as our manager, retention & lifecycle marketing, you\u2019ll own the strategy and execution behind the customer journey from first purchase through long-term loyalty. you\u2019ll combine customer insights, compelling creative, experimentation, personalization, and automation to deliver the right message to the right customer at the right time.this is a high cross-functional role that sits within the creative strategy team. you\u2019ll partner closely with growth marketinbg, creative, product, customer experience, analytics, and engineering to build best-in-class lifecycle programs that strengthen customer relationships while driving measurable business growth.join our team in austin, tx or chicago, il - we're looking for someone who truly values and enjoys working in the office, not just tolerates it.oin our dynamic team and help us create impactful collaborations with influencers to expand our brand reach and drive meaningful engagement with our target audience. this role is full-time in our austin or chicago offices.",
+   "skills": 3
+  },
+  "roles": [],
+  "interests": [],
+  "score": 52
  }
 }
