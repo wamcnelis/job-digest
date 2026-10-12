@@ -23,6 +23,6 @@ jobs:
         run: |
           git config user.name "job-digest bot"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html seen.json
+          git add index.html seen.json priority.json
           git diff --cached --quiet || git commit -m "Daily update $(date -u +%F)"
           git push

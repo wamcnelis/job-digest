@@ -61,6 +61,10 @@
                  width: 32px; height: 32px; border-radius: 8px; }
   .acts button:hover { background: var(--bg); }
   .acts .on { color: var(--star); }
+  .pri-box { margin: 10px 0 18px; }
+  .pri-box h2 { margin-top: 8px; color: var(--accent); }
+  .job.pri { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+  .tag.site { background: var(--accent); color: var(--card); font-weight: 600; }
   .empty { text-align: center; color: var(--muted); padding: 60px 0; }
 </style>
 </head>
@@ -76,11 +80,13 @@
     <button class="tab" data-view="saved">Saved<span class="n" id="n-saved"></span></button>
     <input type="search" id="q" placeholder="Filter by title, company, place…">
   </div>
+  <section class="pri-box" id="priority"></section>
   <div class="chips" id="chips"></div>
   <div id="list"></div>
 </main>
 <script>
 const JOBS = __JOBS__;
+const PRIORITY = __PRIORITY__;  // roles at companies where she has contacts, from their own career sites
 const TODAY = "__TODAY__";
 const store = {
   get(k) { try { return JSON.parse(localStorage.getItem(k)) || {}; } catch { return {}; } },
@@ -105,10 +111,10 @@ function card(j) {
   const logo = j.logo ? `<img class="logo" src="${esc(j.logo)}" alt="${initial}" loading="lazy" referrerpolicy="no-referrer"
       onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'logo blank', textContent: this.alt}))">`
     : `<div class="logo blank">${initial}</div>`;
-  return `<div class="job">${logo}<div class="body">
+  return `<div class="job${j.priority ? " pri" : ""}">${logo}<div class="body">
     <a class="title" href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
     <div class="meta">${esc(j.company)} · ${esc(j.location)}${j.detail?.industry ? ` · ${esc(j.detail.industry)}` : ""}</div>
-    <div class="tags">${j.first_seen === TODAY ? '<span class="tag new">New</span>' : ""}
+    <div class="tags">${j.priority ? '<span class="tag site">Company site</span>' : ""}${j.first_seen === TODAY ? '<span class="tag new">New</span>' : ""}
       ${j.detail?.salary ? `<span class="tag pay">${esc(j.detail.salary)}</span>` : ""}
       ${(j.wheres || []).map(w => `<span class="tag">${esc(w)}</span>`).join("")}
       ${(j.interests || []).map(l => `<span class="tag int">${esc(l)}</span>`).join("")}
@@ -123,14 +129,20 @@ function card(j) {
 function render() {
   const q = document.getElementById("q").value.toLowerCase().trim();
   const visible = JOBS.filter(j => !hidden[j.id]);
-  const sets = { new: visible.filter(j => j.first_seen === TODAY), all: visible, saved: JOBS.filter(j => saved[j.id]) };
+  const sets = { new: visible.filter(j => j.first_seen === TODAY), all: visible,
+                 saved: PRIORITY.concat(JOBS).filter(j => saved[j.id]) };
+  const matchQ = j => !q || [j.title, j.company, j.location].join(" ").toLowerCase().includes(q);
+  const pri = view === "saved" ? [] : PRIORITY.filter(j => !hidden[j.id] && matchQ(j));
+  const coNames = [...new Set(PRIORITY.map(j => j.company))].join(" & ");
+  document.getElementById("priority").innerHTML = pri.length
+    ? `<h2>★ At ${esc(coNames)}</h2>` + pri.map(card).join("") : "";
   for (const k in sets) document.getElementById("n-" + k).textContent = sets[k].length;
   document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-pressed", b.dataset.view === view));
   document.getElementById("chips").innerHTML = chipNames.map(c =>
     `<button class="chip" data-chip="${esc(c)}" aria-pressed="${chips.has(c)}">${esc(c)}</button>`).join("");
   // Location chips narrow by place; interest chips narrow by topic (any selected one matches).
   const pickW = [...chips].filter(c => allWheres.has(c)), pickL = [...chips].filter(c => !allWheres.has(c));
-  let list = sets[view].filter(j => (!q || [j.title, j.company, j.location].join(" ").toLowerCase().includes(q))
+  let list = sets[view].filter(j => matchQ(j)
     && (!pickW.length || pickW.some(c => (j.wheres || []).includes(c)))
     && (!pickL.length || pickL.some(c => tagsOf(j).includes(c))));
   if (!list.length) { document.getElementById("list").innerHTML =

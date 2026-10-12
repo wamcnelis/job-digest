@@ -108,22 +108,22 @@
   ],
   "max_pages_per_search": 3,
   "title_must_include_any": [
-    "communication",
+    "communication*",
     "comms",
     "pr",
     "public relations",
     "media",
-    "brand",
+    "brand*",
     "marketing",
     "content",
     "creative",
-    "storytell",
+    "storytell*",
     "story",
     "advocacy",
     "campaign",
     "engagement",
     "editorial",
-    "design",
+    "design*",
     "publicist",
     "press",
     "narrative",
@@ -135,7 +135,12 @@
     "project manager",
     "program manager",
     "strategist",
-    "social media"
+    "social media",
+    "producer",
+    "art director",
+    "project management",
+    "external affairs",
+    "external relations"
   ],
   "title_exclude": [
     "intern",
@@ -167,10 +172,10 @@
   "company_exclude": [],
   "roles": {
     "Communications": [
-      "communication",
+      "communication*",
       "comms",
       "public affairs",
-      "storytell",
+      "storytell*",
       "narrative",
       "messaging"
     ],
@@ -184,10 +189,10 @@
       "account executive"
     ],
     "Brand": [
-      "brand"
+      "brand*"
     ],
     "Design": [
-      "design",
+      "design*",
       "art director",
       "visual"
     ],
@@ -195,7 +200,7 @@
       "creative",
       "content",
       "editorial",
-      "copywrit",
+      "copywrit*",
       "social media"
     ],
     "Project Mgmt": [
@@ -209,14 +214,14 @@
     "Social impact": {
       "industries": [
         "non-profit",
-        "philanthrop",
+        "philanthrop*",
         "civic",
         "social",
         "government relations",
         "public policy",
         "think tank",
-        "fundrais",
-        "environmental"
+        "fundrais*",
+        "environmental*"
       ],
       "description": [
         "nonprofit",
@@ -245,7 +250,7 @@
         "ob/gyn",
         "obstetric",
         "pelvic health",
-        "midwi",
+        "midwi*",
         "breast cancer"
       ],
       "min_hits": 1
@@ -253,7 +258,7 @@
     "Sports": {
       "industries": [
         "sports",
-        "athletic"
+        "athletic*"
       ],
       "description": [
         "sports",
@@ -277,7 +282,7 @@
         "technology, information",
         "internet",
         "information services",
-        "computer"
+        "computer*"
       ],
       "description": [
         "startup",
@@ -296,14 +301,14 @@
     "storytelling",
     "advocacy",
     "media relations",
-    "pitch",
+    "pitch*",
     "press release",
     "messaging",
     "campaign",
     "thought leadership",
     "op-ed",
     "rapid response",
-    "brand",
+    "brand*",
     "project management",
     "audience",
     "research",
@@ -313,9 +318,45 @@
     "adobe",
     "canva",
     "meltwater",
-    "sprout",
+    "sprout*",
     "cross-functional",
     "stakeholder"
   ],
-  "_comment_tags": "roles: tagged from the job title. interests: tagged from LinkedIn's industry field or phrases in the full description. her_skills: description phrases that raise the match score."
+  "_comment_tags": "roles: tagged from the job title. interests: tagged from LinkedIn's industry field or phrases in the full description. her_skills: description phrases that raise the match score.",
+  "priority_companies": [
+    {
+      "name": "Tin Can",
+      "ats": "ashby",
+      "board": "tin-can"
+    },
+    {
+      "name": "Gates Foundation",
+      "ats": "workday",
+      "host": "gatesfoundation.wd1.myworkdayjobs.com",
+      "tenant": "gatesfoundation",
+      "site": "Gates"
+    }
+  ],
+  "priority_title_any": [
+    "communication*",
+    "comms",
+    "brand*",
+    "pr",
+    "public relations",
+    "media",
+    "press",
+    "content",
+    "creative",
+    "storytell*",
+    "narrative",
+    "marketing",
+    "advocacy",
+    "public affairs",
+    "editorial",
+    "campaign",
+    "engagement",
+    "social media"
+  ],
+  "_comment_priority": "Companies where she has contacts. Checked directly on their own job sites every run (not LinkedIn); matching roles are pinned at the top of the page with links to the company's posting. Supported: ashby (board = the name in jobs.ashbyhq.com/<board>) and workday (host/tenant/site from the careers URL).",
+  "_comment_matching": "Words match whole words (plural s/es allowed). End a word with * to match it as a prefix, e.g. brand* also matches branding."
 }

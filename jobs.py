@@ -19,6 +19,7 @@ from zoneinfo import ZoneInfo
 HERE = Path(__file__).resolve().parent
 CONFIG = HERE / "config.json"
 HISTORY = HERE / "seen.json"
+PRIORITY_SEEN = HERE / "priority.json"
 REPORT = HERE / "index.html"
 KEEP_DAYS = 21
 TZ = ZoneInfo("America/Los_Angeles")  # her time zone, not the server's
@@ -97,8 +98,15 @@ def search(s, loc, cfg):
 
 
 def has(words, txt):
-    """True if any word/phrase appears in txt as a whole word (prefix match, so 'communication' hits 'communications')."""
-    return sum(bool(re.search(r"\b" + re.escape(w.lower()), txt.lower())) for w in words)
+    """How many of `words` appear in txt. Whole words (plural s/es allowed); a trailing * means prefix,
+    e.g. "brand*" also matches "branding". So "pr" matches "PR" but not "product"."""
+    def pat(w):
+        w = w.lower()
+        if w.endswith("*"):
+            return r"(?<![a-z0-9])" + re.escape(w[:-1])
+        return r"(?<![a-z0-9])" + re.escape(w) + r"(?:s|es)?(?![a-z0-9])"
+    txt = txt.lower()
+    return sum(bool(re.search(pat(w), txt)) for w in words)
 
 
 def keep(j, cfg):
@@ -110,6 +118,11 @@ def keep(j, cfg):
     return not has(cfg.get("company_exclude", []), j["company"])
 
 
+def salary_in(desc):
+    m = re.search(r"\$\s?\d[\d,.]*\s?[kK]?(?:\s*(?:-|–|—|to)\s*\$?\s?\d[\d,.]*\s?[kK]?)?(?:\s*(?:per|/|an)\s*(?:year|yr|hour|hr|annually))?", desc)
+    return m.group(0).strip() if m and re.search(r"\d{2}", m.group(0)) else ""
+
+
 def details(jid):
     """Read the full posting once: industry, seniority, applicants, salary, years required, description."""
     page = fetch(DETAIL + jid)
@@ -117,11 +130,10 @@ def details(jid):
         return None
     crit = dict(re.findall(r'criteria-subheader">\s*(.*?)\s*</h3>\s*<span[^>]*>\s*(.*?)\s*</span>', page, re.S))
     desc = text(r'show-more-less-html__markup[^>]*>(.*?)</div>', page)
-    pay = re.search(r"\$\s?\d[\d,.]*\s?[kK]?(?:\s*(?:-|–|—|to)\s*\$?\s?\d[\d,.]*\s?[kK]?)?(?:\s*(?:per|/|an)\s*(?:year|yr|hour|hr|annually))?", desc)
     years = [int(y) for y in re.findall(r"(\d{1,2})\+?\s*(?:-|–|to)?\s*(?:\d{1,2}\s*)?\+?\s*years", desc) if 0 < int(y) < 25]
     apps = re.search(r"([\d,]+|Over \d+)\s+applicants", page)
     return {"industry": html.unescape(crit.get("Industries", "")), "seniority": crit.get("Seniority level", ""),
-            "salary": pay.group(0).strip() if pay and re.search(r"\d{2}", pay.group(0)) else "",
+            "salary": salary_in(desc),
             "years": min(years) if years else None, "applicants": apps.group(1) if apps else "",
             "desc": desc.lower()}
 
@@ -149,6 +161,69 @@ def score(j, d, cfg):
     if j["wheres"] == ["Other US cities"]:              # outside her main targets: needs to be a strong fit
         s -= 25
     return s
+
+
+def get_json(url, body=None):
+    data = json.dumps(body).encode() if body is not None else None
+    req = urllib.request.Request(url, data=data, headers={"User-Agent": UA, "Accept": "application/json",
+                                                          "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)
+
+
+def ashby(co, wanted):
+    board = get_json(f"https://api.ashbyhq.com/posting-api/job-board/{co['board']}?includeCompensation=true")
+    for x in board["jobs"]:
+        if not x.get("isListed", True) or not wanted(x["title"]):
+            continue
+        pay = ((x.get("compensation") or {}).get("compensationTierSummary") or "").split("•")[0].strip()
+        yield {"id": "ashby:" + x["id"], "title": x["title"], "url": x["jobUrl"],
+               "location": x.get("location", "") + (" · Remote" if x.get("isRemote") else ""),
+               "posted": (x.get("publishedAt") or "")[:10], "salary": pay,
+               "desc": (x.get("descriptionPlain") or "").lower()}
+
+
+def workday(co, wanted):
+    base = f"https://{co['host']}/wday/cxs/{co['tenant']}/{co['site']}"
+    offset, total = 0, 1
+    while offset < total:
+        page = get_json(base + "/jobs", {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": ""})
+        total = page.get("total", 0) if offset == 0 else total
+        offset += 20
+        for x in page.get("jobPostings", []):
+            if not wanted(x["title"]):
+                continue
+            info = get_json(base + x["externalPath"]).get("jobPostingInfo", {})
+            desc = html.unescape(re.sub(r"<[^>]+>", " ", info.get("jobDescription", "")))
+            days = re.search(r"(\d+)\+? Days? Ago", x.get("postedOn", ""))
+            ago = int(days.group(1)) if days else 1 if "Yesterday" in x.get("postedOn", "") else 0
+            yield {"id": "wd:" + x["externalPath"], "title": x["title"], "url": f"https://{co['host']}/{co['site']}{x['externalPath']}",
+                   "location": x.get("locationsText", ""), "salary": salary_in(desc),
+                   "posted": (dt.datetime.now(TZ).date() - dt.timedelta(days=ago)).isoformat(),
+                   "desc": desc.lower()}
+
+
+def priority_jobs(cfg, today):
+    """Brand/comms roles at companies where she has contacts, read from their own job sites."""
+    seen = json.loads(PRIORITY_SEEN.read_text()) if PRIORITY_SEEN.exists() else {}
+    wanted = lambda title: has(cfg.get("priority_title_any", []), title) > 0
+    out = []
+    for co in cfg.get("priority_companies", []):
+        print(f"Checking {co['name']} careers site")
+        try:
+            found = list({"ashby": ashby, "workday": workday}[co["ats"]](co, wanted))
+        except Exception as e:  # one site being down shouldn't break the whole digest
+            print(f"  ! couldn't read {co['name']}: {e}", file=sys.stderr)
+            continue
+        for j in found:
+            d = {"industry": "", "desc": j.pop("desc")}
+            j["company"] = co["name"]
+            j.update(logo="", priority=True, first_seen=seen.get(j["id"], today),
+                     roles=[r for r, words in cfg["roles"].items() if has(words, j["title"])],
+                     interests=interests(d, j, cfg), detail={"salary": j.pop("salary")})
+            out.append(j)
+    PRIORITY_SEEN.write_text(json.dumps({j["id"]: j["first_seen"] for j in out}, indent=1))
+    return out
 
 
 def main():
@@ -210,18 +285,20 @@ def main():
     jobs = [j for j in history.values() if j["wheres"] != ["Other US cities"] or j.get("interests")]
     jobs.sort(key=lambda j: (j["first_seen"], j["score"]), reverse=True)
     new = sum(j["first_seen"] == today for j in jobs)
-    REPORT.write_text(render(jobs, today, cfg))
+    priority = priority_jobs(cfg, today)
+    REPORT.write_text(render(jobs, priority, today, cfg))
     print(f"\n{len(found)} matching jobs this run, {new} new today, {len(jobs)} in report -> {REPORT}")
     if "--open" in sys.argv:
         subprocess.run(["open", str(REPORT)])
 
 
-def render(jobs, today, cfg):
+def render(jobs, priority, today, cfg):
     slim = [{**j, "detail": {k: v for k, v in (j.get("detail") or {}).items() if k != "desc"}} for j in jobs]
     data = json.dumps(slim).replace("</", "<\\/")
     tpl = (HERE / "template.html").read_text()
     stamp = dt.datetime.now(TZ).strftime("%a %b %-d, %-I:%M %p Pacific")
-    return (tpl.replace("__JOBS__", data).replace("__TODAY__", today)
+    return (tpl.replace("__JOBS__", data).replace("__PRIORITY__", json.dumps(priority).replace("</", "<\\/"))
+               .replace("__TODAY__", today)
                .replace("__UPDATED__", stamp))
 
 
